@@ -42,6 +42,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="axq-5s-yf1" kind="presentation" modalPresentationStyle="fullScreen" id="7vI-Aw-sgN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -93,9 +96,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="116.49175412293854"/>
+            <point key="canvasLocation" x="1" y="115"/>
         </scene>
-        <!--Question View Controller-->
+        <!--Вопрос №-->
         <scene sceneID="zST-g2-waF">
             <objects>
                 <viewController id="Yg8-Bm-fPL" customClass="QuestionViewController" sceneMemberID="viewController">
@@ -105,19 +108,43 @@
                         <viewLayoutGuide key="safeArea" id="qga-Ca-pRm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IIY-aY-ndQ"/>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="IIY-aY-ndQ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="2Dn-DS-nIt"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Y08-YH-ZNT" kind="show" id="f2i-gf-msV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nt-If-elF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1728.8" y="114.69265367316342"/>
+        </scene>
+        <!--Результаты-->
+        <scene sceneID="gKv-64-qkA">
+            <objects>
+                <viewController id="Y08-YH-ZNT" customClass="FinalViewController" customModule="PersonalQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uMJ-9Y-Lqx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cuK-1f-hU1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Результаты" id="c70-W3-Asb">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="wii-ab-kDj"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mw-Xg-PXA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2460" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dzM-GI-N4a">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="axq-5s-yf1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ECo-CD-80N">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationItem key="navigationItem" id="Hqt-1s-WbR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ECo-CD-80N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

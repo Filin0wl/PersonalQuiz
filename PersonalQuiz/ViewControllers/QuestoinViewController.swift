@@ -5,4 +5,8 @@
 //  Created by Anastasia Perminova on 14.07.2022.
 //
 
-import Foundation
+import UIKit
+
+class QuestionVivwController: UIViewController {
+    
+}
