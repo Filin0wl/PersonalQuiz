@@ -281,7 +281,6 @@
                         <outlet property="multipleStackView" destination="j8A-HB-awc" id="lDg-Un-Qo0"/>
                         <outlet property="progressView" destination="F9S-Pg-Tye" id="ksy-YO-bh4"/>
                         <outlet property="questionLabel" destination="ogl-il-Mea" id="hgm-gl-gmh"/>
-                        <outlet property="rangedLabels" destination="Tqb-gh-lqF" id="U7m-H3-CO1"/>
                         <outlet property="rangedSlider" destination="KwJ-TL-ku1" id="Qys-Xs-L68"/>
                         <outlet property="rangedStackView" destination="6un-M5-pXM" id="rtO-QM-DQC"/>
                         <outlet property="singleStackView" destination="lQD-hx-iJZ" id="VVx-kT-8wJ"/>
@@ -294,6 +293,8 @@
                         <outletCollection property="multipleLabels" destination="WYb-Hz-7HV" collectionClass="NSMutableArray" id="bat-64-rPC"/>
                         <outletCollection property="multipleLabels" destination="U6x-1N-x8V" collectionClass="NSMutableArray" id="0fu-vx-GWr"/>
                         <outletCollection property="multipleLabels" destination="ftp-3E-qEe" collectionClass="NSMutableArray" id="nj4-Ja-d59"/>
+                        <outletCollection property="rangedLabels" destination="9vP-wX-kt0" collectionClass="NSMutableArray" id="AdS-Ey-QnZ"/>
+                        <outletCollection property="rangedLabels" destination="Tqb-gh-lqF" collectionClass="NSMutableArray" id="h3B-Df-TfX"/>
                         <segue destination="Y08-YH-ZNT" kind="show" identifier="showFinal" id="f2i-gf-msV"/>
                     </connections>
                 </viewController>

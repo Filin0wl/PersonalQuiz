@@ -20,7 +20,8 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet var singleButtons: [UIButton]!
     @IBOutlet var multipleLabels: [UILabel]!
-    @IBOutlet weak var rangedLabels: UILabel!
+    @IBOutlet var rangedLabels: [UILabel]!
+    
     
     
     //MARK: - Properties
@@ -77,9 +78,9 @@ extension QuestionsViewController {
             case .single:
                 showSingleStackView(with: currentAnswers)
             case .multiple:
-                break
+                showMultipleStackView(with: currentAnswers)
             case .range:
-                break
+                showRangedStackView(with: currentAnswers)
         }
     }
     
@@ -89,5 +90,20 @@ extension QuestionsViewController {
         for (button, answer) in zip(singleButtons, answers) {
             button.setTitle(answer.text, for: .normal)
         }
+    }
+    
+    private func showMultipleStackView(with answers: [Answer]) {
+        multipleStackView.isHidden = false
+        
+        for (label, answer) in zip(multipleLabels, answers) {
+            label.text = answer.text
+        }
+    }
+    
+    private func showRangedStackView(with answers: [Answer]) {
+        rangedStackView.isHidden = false
+        
+        rangedLabels.first?.text = answers.first?.text
+        rangedLabels.last?.text = answers.last?.text
     }
 }
