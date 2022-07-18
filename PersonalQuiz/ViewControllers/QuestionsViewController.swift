@@ -23,12 +23,16 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var rangedLabels: UILabel!
     
     
+    //MARK: - Properties
+    private let questions = Question.getQuestions()
+    private var questionIndex = 0
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateUI()
     }
     
 
@@ -42,4 +46,15 @@ class QuestionsViewController: UIViewController {
     }
     */
 
+}
+
+//MARK: - Private
+extension QuestionsViewController {
+    private func updateUI() {
+        for stackView in [singleStackView, multipleStackView, rangedStackView] {
+            stackView?.isHidden = true
+        }
+        
+        let currentQuestions = questions[questionIndex]
+    }
 }
