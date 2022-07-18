@@ -115,6 +115,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="Yg8-Bm-fPL" eventType="touchUpInside" id="G90-KO-N4f"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uA-Ba-Bix">
                                         <rect key="frame" x="0.0" y="65.5" width="343" height="38"/>
@@ -122,6 +125,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="Yg8-Bm-fPL" eventType="touchUpInside" id="7WF-ij-36v"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZb-if-aXF">
                                         <rect key="frame" x="0.0" y="129.5" width="343" height="38"/>
@@ -129,6 +135,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="Yg8-Bm-fPL" eventType="touchUpInside" id="6da-kd-5Gh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRX-GS-JCX">
                                         <rect key="frame" x="0.0" y="193.5" width="343" height="38"/>
@@ -136,6 +145,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="Yg8-Bm-fPL" eventType="touchUpInside" id="ffB-bJ-hvV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -202,6 +214,9 @@
                                         <rect key="frame" x="0.0" y="264" width="343" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <action selector="multipleAnswerPressed" destination="Yg8-Bm-fPL" eventType="touchUpInside" id="2G9-lV-JAw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -235,6 +250,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
                                         <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="Yg8-Bm-fPL" eventType="touchUpInside" id="qCB-N3-Ihl"/>
                                             <segue destination="Y08-YH-ZNT" kind="show" id="zcf-Xa-cMg"/>
                                         </connections>
                                     </button>
@@ -285,7 +301,6 @@
                         <outlet property="rangedStackView" destination="6un-M5-pXM" id="rtO-QM-DQC"/>
                         <outlet property="singleStackView" destination="lQD-hx-iJZ" id="VVx-kT-8wJ"/>
                         <outletCollection property="singleButtons" destination="iNt-av-44U" collectionClass="NSMutableArray" id="kKG-Gi-4sb"/>
-                        <outletCollection property="singleButtons" destination="iNt-av-44U" collectionClass="NSMutableArray" id="Ht2-0b-y2a"/>
                         <outletCollection property="singleButtons" destination="0uA-Ba-Bix" collectionClass="NSMutableArray" id="J9t-aD-lUP"/>
                         <outletCollection property="singleButtons" destination="aZb-if-aXF" collectionClass="NSMutableArray" id="2hW-Sx-Vtv"/>
                         <outletCollection property="singleButtons" destination="pRX-GS-JCX" collectionClass="NSMutableArray" id="qeX-HP-FIB"/>

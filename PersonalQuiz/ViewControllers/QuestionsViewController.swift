@@ -32,25 +32,26 @@ class QuestionsViewController: UIViewController {
         questions[questionIndex].answer
     }
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         updateUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//MARK: - Actions
+    
+    @IBAction func singleButtonAnswerPressed(_ sender: UIButton) {
+        guard let currentIndex = singleButtons.firstIndex(of: sender) else { return }
+        
+        let currentAnswer = currentAnswers[currentIndex]
+        answerChosen.append(currentAnswer)
     }
-    */
+    
+    @IBAction func multipleAnswerPressed() {
+    }
+    
+    @IBAction func rangedAnswerButtonPressed() {
+    }
 
 }
 
