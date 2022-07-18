@@ -101,7 +101,7 @@
         <!--Вопрос №-->
         <scene sceneID="zST-g2-waF">
             <objects>
-                <viewController id="Yg8-Bm-fPL" customClass="QuestionViewController" sceneMemberID="viewController">
+                <viewController id="Yg8-Bm-fPL" customClass="QuestionsViewController" customModule="PersonalQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XO2-KQ-7jf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,6 +278,22 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="2Dn-DS-nIt"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="multipleStackView" destination="j8A-HB-awc" id="lDg-Un-Qo0"/>
+                        <outlet property="progressView" destination="F9S-Pg-Tye" id="ksy-YO-bh4"/>
+                        <outlet property="questionLabel" destination="ogl-il-Mea" id="hgm-gl-gmh"/>
+                        <outlet property="rangedLabels" destination="Tqb-gh-lqF" id="U7m-H3-CO1"/>
+                        <outlet property="rangedSlider" destination="KwJ-TL-ku1" id="Qys-Xs-L68"/>
+                        <outlet property="rangedStackView" destination="6un-M5-pXM" id="rtO-QM-DQC"/>
+                        <outlet property="singleStackView" destination="lQD-hx-iJZ" id="VVx-kT-8wJ"/>
+                        <outletCollection property="singleButtons" destination="iNt-av-44U" collectionClass="NSMutableArray" id="kKG-Gi-4sb"/>
+                        <outletCollection property="singleButtons" destination="iNt-av-44U" collectionClass="NSMutableArray" id="Ht2-0b-y2a"/>
+                        <outletCollection property="singleButtons" destination="0uA-Ba-Bix" collectionClass="NSMutableArray" id="J9t-aD-lUP"/>
+                        <outletCollection property="singleButtons" destination="aZb-if-aXF" collectionClass="NSMutableArray" id="2hW-Sx-Vtv"/>
+                        <outletCollection property="singleButtons" destination="pRX-GS-JCX" collectionClass="NSMutableArray" id="qeX-HP-FIB"/>
+                        <outletCollection property="multipleLabels" destination="Eav-q6-obe" collectionClass="NSMutableArray" id="1LT-ay-5CW"/>
+                        <outletCollection property="multipleLabels" destination="WYb-Hz-7HV" collectionClass="NSMutableArray" id="bat-64-rPC"/>
+                        <outletCollection property="multipleLabels" destination="U6x-1N-x8V" collectionClass="NSMutableArray" id="0fu-vx-GWr"/>
+                        <outletCollection property="multipleLabels" destination="ftp-3E-qEe" collectionClass="NSMutableArray" id="nj4-Ja-d59"/>
                         <segue destination="Y08-YH-ZNT" kind="show" identifier="showFinal" id="f2i-gf-msV"/>
                     </connections>
                 </viewController>
