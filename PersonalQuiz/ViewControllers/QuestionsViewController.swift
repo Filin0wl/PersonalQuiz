@@ -26,6 +26,11 @@ class QuestionsViewController: UIViewController {
     //MARK: - Properties
     private let questions = Question.getQuestions()
     private var questionIndex = 0
+    private var answerChosen: [Answer] = []
+    private var currentAnswers: [Answer] {
+        questions[questionIndex].answer
+    }
+    
     
     
     
@@ -56,5 +61,33 @@ extension QuestionsViewController {
         }
         
         let currentQuestions = questions[questionIndex]
+        
+        questionLabel.text = currentQuestions.text
+        
+        let totalProgress = Float(questionIndex) / Float(questions.count)
+        progressView.setProgress(totalProgress, animated: true)
+        title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
+        
+        showCurrentStackView(for: currentQuestions.type)
+        
+    }
+    
+    private func showCurrentStackView(for type: ResponseType) {
+        switch type {
+            case .single:
+                showSingleStackView(with: currentAnswers)
+            case .multiple:
+                break
+            case .range:
+                break
+        }
+    }
+    
+    private func showSingleStackView(with answers: [Answer]) {
+        singleStackView.isHidden = false
+        
+        for (button, answer) in zip(singleButtons, answers) {
+            button.setTitle(answer.text, for: .normal)
+        }
     }
 }
