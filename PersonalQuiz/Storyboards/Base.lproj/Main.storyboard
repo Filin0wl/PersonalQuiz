@@ -357,10 +357,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="c70-W3-Asb">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="wii-ab-kDj"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="wii-ab-kDj">
+                            <connections>
+                                <segue destination="S8C-gg-01r" kind="unwind" unwindAction="unwindFor:" id="Col-NI-A80"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mw-Xg-PXA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="S8C-gg-01r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2460" y="114.69265367316342"/>
         </scene>
