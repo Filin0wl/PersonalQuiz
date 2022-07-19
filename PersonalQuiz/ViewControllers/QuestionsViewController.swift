@@ -45,9 +45,12 @@ class QuestionsViewController: UIViewController {
         
         let currentAnswer = currentAnswers[currentIndex]
         answerChosen.append(currentAnswer)
+        
+        newQuestion()
     }
     
     @IBAction func multipleAnswerPressed() {
+        
     }
     
     @IBAction func rangedAnswerButtonPressed() {
@@ -106,5 +109,16 @@ extension QuestionsViewController {
         
         rangedLabels.first?.text = answers.first?.text
         rangedLabels.last?.text = answers.last?.text
+    }
+    
+    private func newQuestion() {
+        questionIndex += 1
+        
+        if questionIndex < questions.count {
+            updateUI()
+            return
+        }
+        
+        performSegue(withIdentifier: "showResult", sender: nil)
     }
 }
