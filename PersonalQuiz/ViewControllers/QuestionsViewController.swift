@@ -12,7 +12,12 @@ class QuestionsViewController: UIViewController {
     //MARK: -Outlets
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var rangedSlider: UISlider!
+    @IBOutlet weak var rangedSlider: UISlider! {
+        didSet {
+            let answerCount = Float(currentAnswers.count - 1)
+            rangedSlider.value = answerCount
+        }
+    }
     
     @IBOutlet weak var singleStackView: UIStackView!
     @IBOutlet weak var multipleStackView: UIStackView!
@@ -20,7 +25,7 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet var singleButtons: [UIButton]!
     @IBOutlet var multipleLabels: [UILabel]!
-    @IBOutlet var multipleSwitchs: [UISwitch]!
+    @IBOutlet var multipleSwitches: [UISwitch]!
     @IBOutlet var rangedLabels: [UILabel]!
     
     
@@ -48,14 +53,24 @@ class QuestionsViewController: UIViewController {
         let currentAnswer = currentAnswers[currentIndex]
         answerChosen.append(currentAnswer)
         
-        newQuestion()
+        nextQuestion()
     }
     
     @IBAction func multipleAnswerPressed() {
+        for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
+            if multipleSwitch.isOn {
+                answerChosen.append(answer)
+            }
+        }
         
+        nextQuestion()
     }
     
     @IBAction func rangedAnswerButtonPressed() {
+        let index = Int(rangedSlider.value)
+        answerChosen.append(currentAnswers[index])
+        
+        nextQuestion()
     }
 
 }
@@ -113,7 +128,7 @@ extension QuestionsViewController {
         rangedLabels.last?.text = answers.last?.text
     }
     
-    private func newQuestion() {
+    private func nextQuestion() {
         questionIndex += 1
         
         if questionIndex < questions.count {

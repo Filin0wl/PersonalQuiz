@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -154,11 +155,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="j8A-HB-awc">
                                 <rect key="frame" x="16" y="186" width="343" height="295"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="144" translatesAutoresizingMaskIntoConstraints="NO" id="gje-yL-UeA">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gje-yL-UeA">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eav-q6-obe">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="286" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -168,11 +169,11 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="144" translatesAutoresizingMaskIntoConstraints="NO" id="2YK-b2-c0P">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2YK-b2-c0P">
                                         <rect key="frame" x="0.0" y="66" width="343" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYb-Hz-7HV">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="286" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -182,11 +183,11 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="144" translatesAutoresizingMaskIntoConstraints="NO" id="V6Y-64-S1f">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="V6Y-64-S1f">
                                         <rect key="frame" x="0.0" y="132" width="343" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6x-1N-x8V">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="286" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -196,11 +197,11 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="144" translatesAutoresizingMaskIntoConstraints="NO" id="ITl-vO-dtx">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ITl-vO-dtx">
                                         <rect key="frame" x="0.0" y="198" width="343" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftp-3E-qEe">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="286" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -310,11 +311,11 @@
                         <outletCollection property="multipleLabels" destination="ftp-3E-qEe" collectionClass="NSMutableArray" id="nj4-Ja-d59"/>
                         <outletCollection property="rangedLabels" destination="9vP-wX-kt0" collectionClass="NSMutableArray" id="AdS-Ey-QnZ"/>
                         <outletCollection property="rangedLabels" destination="Tqb-gh-lqF" collectionClass="NSMutableArray" id="h3B-Df-TfX"/>
-                        <outletCollection property="multipleSwitchs" destination="k6I-sZ-uSX" collectionClass="NSMutableArray" id="Zsu-bE-Bdk"/>
-                        <outletCollection property="multipleSwitchs" destination="lYW-qa-Lck" collectionClass="NSMutableArray" id="2F4-sJ-6SX"/>
-                        <outletCollection property="multipleSwitchs" destination="tHg-h5-59I" collectionClass="NSMutableArray" id="X2Z-TR-htj"/>
-                        <outletCollection property="multipleSwitchs" destination="dmf-r1-1Ag" collectionClass="NSMutableArray" id="zKc-6o-MKl"/>
-                        <segue destination="Y08-YH-ZNT" kind="show" identifier="showFinal" id="f2i-gf-msV"/>
+                        <outletCollection property="multipleSwitches" destination="k6I-sZ-uSX" collectionClass="NSMutableArray" id="PiY-ad-6Gx"/>
+                        <outletCollection property="multipleSwitches" destination="lYW-qa-Lck" collectionClass="NSMutableArray" id="r2S-yX-f0T"/>
+                        <outletCollection property="multipleSwitches" destination="tHg-h5-59I" collectionClass="NSMutableArray" id="hV0-xE-WPn"/>
+                        <outletCollection property="multipleSwitches" destination="dmf-r1-1Ag" collectionClass="NSMutableArray" id="RyJ-7m-Hha"/>
+                        <segue destination="Y08-YH-ZNT" kind="show" identifier="showResult" id="f2i-gf-msV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nt-If-elF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
