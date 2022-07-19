@@ -252,7 +252,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
                                         <connections>
                                             <action selector="rangedAnswerButtonPressed" destination="Yg8-Bm-fPL" eventType="touchUpInside" id="qCB-N3-Ihl"/>
-                                            <segue destination="Y08-YH-ZNT" kind="show" id="zcf-Xa-cMg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -385,9 +384,6 @@
             <point key="canvasLocation" x="866" y="115"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="f2i-gf-msV"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
