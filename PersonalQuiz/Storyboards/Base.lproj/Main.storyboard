@@ -310,6 +310,10 @@
                         <outletCollection property="multipleLabels" destination="ftp-3E-qEe" collectionClass="NSMutableArray" id="nj4-Ja-d59"/>
                         <outletCollection property="rangedLabels" destination="9vP-wX-kt0" collectionClass="NSMutableArray" id="AdS-Ey-QnZ"/>
                         <outletCollection property="rangedLabels" destination="Tqb-gh-lqF" collectionClass="NSMutableArray" id="h3B-Df-TfX"/>
+                        <outletCollection property="multipleSwitchs" destination="k6I-sZ-uSX" collectionClass="NSMutableArray" id="Zsu-bE-Bdk"/>
+                        <outletCollection property="multipleSwitchs" destination="lYW-qa-Lck" collectionClass="NSMutableArray" id="2F4-sJ-6SX"/>
+                        <outletCollection property="multipleSwitchs" destination="tHg-h5-59I" collectionClass="NSMutableArray" id="X2Z-TR-htj"/>
+                        <outletCollection property="multipleSwitchs" destination="dmf-r1-1Ag" collectionClass="NSMutableArray" id="zKc-6o-MKl"/>
                         <segue destination="Y08-YH-ZNT" kind="show" identifier="showFinal" id="f2i-gf-msV"/>
                     </connections>
                 </viewController>

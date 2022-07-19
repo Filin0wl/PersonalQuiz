@@ -20,7 +20,9 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet var singleButtons: [UIButton]!
     @IBOutlet var multipleLabels: [UILabel]!
+    @IBOutlet var multipleSwitchs: [UISwitch]!
     @IBOutlet var rangedLabels: [UILabel]!
+    
     
     
     
