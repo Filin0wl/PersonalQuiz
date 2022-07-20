@@ -22,16 +22,16 @@ class FinalViewController: UIViewController {
 
         self.navigationItem.setHidesBackButton(true, animated: false)
         
-        getResult(anwers: chosenAnswers)
+        let result = maxResultAnimal(anwers: chosenAnswers)
+        updateUI(with: result)
     }
 }
 
 //MARK: - Private methods
 extension FinalViewController {
     
-    private func getResult(anwers: [Answer]) {
-        let resultDictionary = Dictionary(grouping: anwers, by: {$0.type}).sorted(by: {$0.value.count > $1.value.count})
-        updateUI(with: resultDictionary.first?.key)
+    private func maxResultAnimal(anwers: [Answer]) -> AnimalType? {
+        return Dictionary(grouping: anwers, by: {$0.type}).sorted(by: {$0.value.count > $1.value.count}).first?.key
     }
     
     private func updateUI(with animal: AnimalType?) {
