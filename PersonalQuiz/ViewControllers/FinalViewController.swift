@@ -9,6 +9,8 @@ import UIKit
 
 class FinalViewController: UIViewController {
 
+    var chosenAnswers: [Answer] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

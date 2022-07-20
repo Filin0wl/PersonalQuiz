@@ -38,11 +38,17 @@ class QuestionsViewController: UIViewController {
     private var currentAnswers: [Answer] {
         questions[questionIndex].answer
     }
-    
+    //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
 
         updateUI()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "showResult" else { return }
+        guard let destination = segue.destination as? FinalViewController else { return }
+        destination.chosenAnswers = answerChosen
     }
     
 //MARK: - Actions
@@ -77,6 +83,7 @@ class QuestionsViewController: UIViewController {
 
 //MARK: - Private
 extension QuestionsViewController {
+    
     private func updateUI() {
         for stackView in [singleStackView, multipleStackView, rangedStackView] {
             stackView?.isHidden = true
