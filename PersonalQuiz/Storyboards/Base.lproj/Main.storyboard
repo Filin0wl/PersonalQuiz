@@ -224,7 +224,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="6un-M5-pXM">
                                 <rect key="frame" x="16" y="271" width="343" height="125.5"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KwJ-TL-ku1">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="KwJ-TL-ku1">
                                         <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                         <color key="maximumTrackTintColor" systemColor="systemPinkColor"/>
@@ -357,10 +357,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="c70-W3-Asb">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="wii-ab-kDj"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="wii-ab-kDj">
+                            <connections>
+                                <segue destination="S8C-gg-01r" kind="unwind" unwindAction="unwindFor:" id="Col-NI-A80"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="YTz-xF-hBN" id="wS5-N6-kPb"/>
+                        <outlet property="titleLabel" destination="0sU-ub-2h9" id="VM3-G3-L13"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mw-Xg-PXA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="S8C-gg-01r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2460" y="114.69265367316342"/>
         </scene>

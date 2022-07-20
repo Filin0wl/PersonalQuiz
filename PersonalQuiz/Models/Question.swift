@@ -33,9 +33,9 @@ extension Question {
                 Answer(text: "Проводить время в лесу", type: .koala)
             ]),
             Question(text: "Любите ли вы поездки на машине?", type: .range, answer: [
-                Answer(text: "Люблю", type: .dog),
+                Answer(text: "Обожаю", type: .dog),
                 Answer(text: "Люблю", type: .cat),
-                Answer(text: "Ненавижу", type: .koala),
+                Answer(text: "Равнодушно", type: .koala),
                 Answer(text: "Ненавижу", type: .fox)
             ])
         ]
