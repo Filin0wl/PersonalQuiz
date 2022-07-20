@@ -224,7 +224,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="6un-M5-pXM">
                                 <rect key="frame" x="16" y="271" width="343" height="125.5"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KwJ-TL-ku1">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="KwJ-TL-ku1">
                                         <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                         <color key="maximumTrackTintColor" systemColor="systemPinkColor"/>
@@ -265,6 +265,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw8-Aq-IfV">
+                                <rect key="frame" x="166" y="502" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qga-Ca-pRm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -300,6 +307,7 @@
                         <outlet property="rangedSlider" destination="KwJ-TL-ku1" id="Qys-Xs-L68"/>
                         <outlet property="rangedStackView" destination="6un-M5-pXM" id="rtO-QM-DQC"/>
                         <outlet property="singleStackView" destination="lQD-hx-iJZ" id="VVx-kT-8wJ"/>
+                        <outlet property="test" destination="Nw8-Aq-IfV" id="2z9-jX-Od9"/>
                         <outletCollection property="singleButtons" destination="iNt-av-44U" collectionClass="NSMutableArray" id="kKG-Gi-4sb"/>
                         <outletCollection property="singleButtons" destination="0uA-Ba-Bix" collectionClass="NSMutableArray" id="J9t-aD-lUP"/>
                         <outletCollection property="singleButtons" destination="aZb-if-aXF" collectionClass="NSMutableArray" id="2hW-Sx-Vtv"/>
