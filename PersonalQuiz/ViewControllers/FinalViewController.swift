@@ -13,7 +13,6 @@ class FinalViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    // 4. Отобразить результат на экране
     
     //MARK: - Properties
     var chosenAnswers: [Answer] = []
@@ -23,6 +22,10 @@ class FinalViewController: UIViewController {
 
         self.navigationItem.setHidesBackButton(true, animated: false)
       
+        let result = getResult(anwers: chosenAnswers)
+        
+        titleLabel.text = "Вы - \(result.rawValue)"
+        descriptionLabel.text = result.definition
         
     }
 }
