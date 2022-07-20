@@ -8,14 +8,24 @@
 import UIKit
 
 class FinalViewController: UIViewController {
-
+    
+   //MARK: - Outlets
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    // 4. Отобразить результат на экране
+    
+    //MARK: - Properties
     var chosenAnswers: [Answer] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.setHidesBackButton(true, animated: false)
+      
+        
     }
+}
 
 //MARK: - Private methods
 extension FinalViewController {
