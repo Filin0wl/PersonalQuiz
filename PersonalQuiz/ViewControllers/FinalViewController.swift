@@ -21,29 +21,21 @@ class FinalViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.setHidesBackButton(true, animated: false)
-      
-        let result = getResult(anwers: chosenAnswers)
         
-        titleLabel.text = "Вы - \(result.rawValue)"
-        descriptionLabel.text = result.definition
-        
+        getResult(anwers: chosenAnswers)
     }
 }
 
 //MARK: - Private methods
 extension FinalViewController {
     
-    private func getResult(anwers: [Answer]) -> AnimalType {
-        var resultDictionary = [AnimalType: Int]()
-        
-        for item in anwers {
-            if let count = resultDictionary[item.type] {
-                resultDictionary[item.type] = count + 1
-            } else {
-                resultDictionary[item.type] = 1
-            }
-        }
-        
-        return resultDictionary.sorted(by: {$0.value > $1.value}).first?.key ?? .dog
+    private func getResult(anwers: [Answer]) {
+        let resultDictionary = Dictionary(grouping: anwers, by: {$0.type}).sorted(by: {$0.value.count > $1.value.count})
+        updateUI(with: resultDictionary.first?.key)
+    }
+    
+    private func updateUI(with animal: AnimalType?) {
+        titleLabel.text = "Вы - \(animal?.rawValue ?? "💩")"
+        descriptionLabel.text = animal?.definition ?? ""
     }
 }
